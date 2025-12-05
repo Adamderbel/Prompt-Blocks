@@ -1,10 +1,10 @@
 # 🧩 PromptBlocks
+> **A reusable skeleton framework for building AI-powered applications**
 
 PromptBlocks demonstrates the Skeleton Crew pattern: one production-ready foundation powering multiple applications with zero code duplication.
 
-> **A reusable skeleton framework for building AI-powered applications**
 
-**🎯 Hackathon Submission**: This project is submitted to the [Kiro Hackathon - Skeleton Crew Category](https://kiro.ai/hackathon)
+**🎯 Hackathon Submission**: This project is submitted to the [Kiro Hackathon - Skeleton Crew Category](https://kiroween.devpost.com/?_gl=1*12nunb4*_gcl_au*NjYyMjM3OTg0LjE3NTg4MjA4MjY.*_ga*MjcwNzE4NjM3LjE3NTg4MjA4Mjc.*_ga_0YHJK3Y10M*czE3NjQ5NDAyOTIkbzExNCRnMSR0MTc2NDk0MTE2NCRqMiRsMCRoMA..)
 
 
 ---
@@ -124,13 +124,6 @@ Adding a new transformation block takes 5 minutes:
 - **Languages**: JavaScript (ES6+), HTML5, CSS3
 - **Browser**: Any modern browser with ES6 support
 
-### ⚡ Key Features
-- 🛡️ Production-ready error handling
-- 🔄 Automatic retry logic (2s, 4s, 8s exponential backoff)
-- ✅ Input validation and sanitization
-- 📖 Human-readable output formatting
-- 🔗 Workflow state management
-- 💾 localStorage for workflow persistence
 
 ---
 
@@ -189,27 +182,33 @@ promptblocks/
 │   └── hooks/                # Agent hooks for automation
 │
 ├── ⚙️ config.example.js      # API key template
-└── 🏠 index.html             # Main landing page
 ```
 
 ---
 
 ## 🧪 Testing Guide (for Judges)
 
-### 1️⃣ View the Landing Page
-Open `index.html` in your browser to see the project overview.
+### 🚀 Quick Start
+```bash
+# Clone the repository
+git clone [your-repo-url]
+cd promptblocks
+
+# Set up API key
+cp config.example.js config.js
+# Edit config.js and add your OpenRouter API key
+```
 
 ### 2️⃣ Try the Applications
 
 **Run locally**
 1. Get a free API key from [OpenRouter](https://openrouter.ai/keys)
-2. Copy `config.example.js` to `config.js`
-3. Add your API key to `config.js`:
+2. Add your API key to `config.js`:
    ```javascript
    var OPENROUTER_API_KEY = "your-key-here";
    ```
-4. Open `app_personal/index.html` for Single-Block Executor
-5. Open `app_workflow/index.html` for Workflow Builder
+3. Open `app_personal/index.html` for Single-Block Executor
+4. Open `app_workflow/index.html` for Workflow Builder
 
 ### 3️⃣ Test the Apps
 
@@ -237,35 +236,6 @@ To verify zero code duplication:
 
 ---
 
-## 💻 Development Commands
-
-### 🚀 Quick Start
-```bash
-# Clone the repository
-git clone [your-repo-url]
-cd promptblocks
-
-# Set up API key
-cp config.example.js config.js
-# Edit config.js and add your OpenRouter API key
-
-# Open applications
-# Single-Block Executor: app_personal/index.html
-# Workflow Builder: app_workflow/index.html
-```
-
-### 🔧 Configuration
-```javascript
-// config.js
-var OPENROUTER_API_KEY = "your-key-here";
-```
-
-### 🧪 Testing
-No build process required! Simply open HTML files in your browser:
-- Main landing: `index.html`
-- Personal app: `app_personal/index.html`
-- Workflow app: `app_workflow/index.html`
-
 ### 🎨 Customization
 
 **Add a new block:**
@@ -288,28 +258,6 @@ No build process required! Simply open HTML files in your browser:
 // skeleton/block_executor.js
 const MODEL = 'provider/model-name:free';
 ```
-
----
-
-## 🏆 For Hackathon Judges
-
-### ✨ What Makes This Special
-
-1. **🎯 True Skeleton Pattern**: Not just shared code—a complete reusable foundation
-2. **🚫 Zero Duplication**: Both apps share 100% of core logic
-3. **🚀 Production Ready**: Error handling, retry logic, validation built-in
-4. **🔌 Extensible**: Add new blocks or build new apps in minutes
-5. **📚 Well Documented**: Specs, steering docs, and agent hooks included
-6. **🤖 Kiro-Powered**: Built using Kiro's specs, steering, and hooks features
-
-### 🎬 Demo & Resources
-
-- 🎥 **Video Demo**: [Watch on YouTube](#) <!-- Add your video link here -->
-- 💻 **GitHub Repository**: [View Source Code](#) <!-- Add your GitHub link here -->
-- 📖 **Documentation**: Complete specs in `.kiro/specs/promptblocks/`
-- 🏷️ **Category**: Skeleton Crew
-- 🤖 **Built with**: Kiro (specs, steering, hooks)
-
 
 ---
 
