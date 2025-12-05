@@ -191,7 +191,7 @@ promptblocks/
 ### 🚀 Quick Start
 ```bash
 # Clone the repository
-git clone [your-repo-url]
+git clone https://github.com/Adamderbel/Prompt-Blocks.git
 cd promptblocks
 
 # Set up API key
