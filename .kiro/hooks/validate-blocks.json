@@ -1,0 +1,9 @@
+{
+  "name": "Validate Block Registry",
+  "description": "Validates that all blocks in block_registry.js have required fields and sample data",
+  "trigger": {
+    "type": "onSave",
+    "filePattern": "skeleton/block_registry.js"
+  },
+  "prompt": "Please validate the block registry:\n\n1. Check that all blocks have required fields: id, name, description, prompt, sampleInput\n2. Verify that each block's id matches an entry in skeleton/sample_data.js\n3. Check for duplicate block IDs\n4. Ensure all block IDs use camelCase naming\n5. Report any issues found or confirm all blocks are valid\n\nProvide a clear summary of validation results."
+}

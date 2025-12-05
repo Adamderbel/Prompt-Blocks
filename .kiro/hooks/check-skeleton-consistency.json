@@ -1,0 +1,9 @@
+{
+  "name": "Check Skeleton Consistency",
+  "description": "Ensures skeleton changes don't break the apps and maintains zero duplication",
+  "trigger": {
+    "type": "onSave",
+    "filePattern": "skeleton/*.js"
+  },
+  "prompt": "A skeleton engine file was modified. Please verify:\n\n1. Check that both app_personal and app_workflow still reference the skeleton correctly\n2. Ensure no skeleton logic has been duplicated in app files\n3. Verify that both apps' HTML files load all required skeleton scripts in the correct order\n4. Confirm that function signatures haven't changed in a way that would break the apps\n\nProvide a brief report on consistency status or any issues found."
+}

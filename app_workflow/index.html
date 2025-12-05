@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptBlocks Workflow Builder - Chain AI Transformations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PromptBlocks Workflow Builder</h1>
+            <p class="intro">Chain multiple transformations together</p>
+        </header>
+
+        <main>
+            <section class="workflow-builder">
+                <div class="workflow-header">
+                    <div>
+                        <label>Build Workflow:</label>
+                        <p class="helper-text">Select blocks in the order you want them to execute</p>
+                    </div>
+                    <div class="workflow-actions">
+                        <button id="saveWorkflowBtn" class="btn btn-secondary btn-small">💾 Save Workflow</button>
+                        <button id="loadWorkflowBtn" class="btn btn-secondary btn-small">📂 Load Saved</button>
+                    </div>
+                </div>
+                <div class="block-checkboxes">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="block" value="summarizeText">
+                        <span>summarizeText</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="block" value="extractKeyPoints">
+                        <span>extractKeyPoints</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="block" value="improveWritingQuality">
+                        <span>improveWritingQuality</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="block" value="rewriteAsEmail">
+                        <span>rewriteAsEmail</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="block" value="translateText">
+                        <span>translateText</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="block" value="convertToTable">
+                        <span>convertToTable</span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="workflow-info">
+                <p class="info-text">
+                    <strong>For demonstration purposes</strong>, we've included pre-built workflows below. 
+                    However, you can create custom workflows by selecting any combination of blocks above. 
+                    Your custom workflows can be saved and reused.
+                </p>
+            </section>
+
+            <section class="sample-workflows">
+                <label for="sampleWorkflow">Or Load Sample Workflow:</label>
+                <select id="sampleWorkflow">
+                    <option value="">-- Choose a sample workflow --</option>
+                    <option value="content-pipeline">Content Pipeline (summarizeText → extractKeyPoints)</option>
+                    <option value="communication-pipeline">Communication Pipeline (improveWritingQuality → rewriteAsEmail)</option>
+                    <option value="multilingual-workflow">Multilingual Workflow (summarizeText → translateText)</option>
+                    <option value="data-extraction">Data Extraction (extractKeyPoints → convertToTable)</option>
+                </select>
+            </section>
+
+            <section class="input-section">
+                <label for="inputText">Input Text:</label>
+                <textarea id="inputText" rows="8" placeholder="Enter your text here..."></textarea>
+            </section>
+
+            <section class="actions">
+                <button id="runWorkflowBtn" class="btn btn-primary">Run Workflow</button>
+            </section>
+
+            <div id="errorMessage" class="error-message"></div>
+            
+            <div id="loadingIndicator" class="loading-indicator">
+                <div class="spinner"></div>
+                <p>Executing workflow...</p>
+            </div>
+
+            <section class="results-section">
+                <div class="results-header">
+                    <label>Workflow Results:</label>
+                    <div class="results-actions" id="resultsActions" style="display: none;">
+                        <button id="copyAllBtn" class="btn btn-copy">📋 Copy All</button>
+                        <button id="exportBtn" class="btn btn-copy">💾 Export Results</button>
+                    </div>
+                </div>
+                <div id="workflowResults" class="workflow-results"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Configuration -->
+    <script src="../config.js"></script>
+    
+    <!-- Skeleton Engine Scripts -->
+    <script src="../skeleton/utils.js"></script>
+    <script src="../skeleton/block_registry.js"></script>
+    <script src="../skeleton/sample_data.js"></script>
+    <script src="../skeleton/block_executor.js"></script>
+    <script src="../skeleton/workflow_engine.js"></script>
+    
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>

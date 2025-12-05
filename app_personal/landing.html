@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single-Block Executor - PromptBlocks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .section p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .feature-item {
+            background: #f8f9fb;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e8ecef;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-item h3 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+
+        .blocks-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .block-tag {
+            background: #f8f9fb;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            color: #667eea;
+            font-weight: 600;
+            border: 1px solid #e8ecef;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Single-Block Executor</h1>
+        <p class="subtitle">Simple, focused text transformations</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>What is this?</h2>
+            <p>
+                The Single-Block Executor demonstrates the simplest use case of the PromptBlocks skeleton framework: 
+                executing one AI transformation at a time. Perfect for quick, focused tasks.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast & Simple</h3>
+                    <p>Select a block, enter text, transform</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Focused</h3>
+                    <p>One transformation at a time</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📋</div>
+                    <h3>Copy Results</h3>
+                    <p>One-click copy to clipboard</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🧪</div>
+                    <h3>Sample Data</h3>
+                    <p>Test with pre-loaded examples</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Available Blocks</h2>
+            <div class="blocks-list">
+                <div class="block-tag">summarizeText</div>
+                <div class="block-tag">extractKeyPoints</div>
+                <div class="block-tag">improveWritingQuality</div>
+                <div class="block-tag">rewriteAsEmail</div>
+                <div class="block-tag">translateText</div>
+                <div class="block-tag">convertToTable</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>How It Works</h2>
+            <p>
+                This application uses the PromptBlocks skeleton engine to handle AI integration, error handling, 
+                and output formatting. The UI layer simply provides a clean interface for selecting blocks and 
+                displaying results.
+            </p>
+            <p>
+                <strong>Architecture:</strong> The skeleton handles all the complexity—this app is just 
+                HTML, CSS, and minimal JavaScript for UI interactions.
+            </p>
+        </div>
+
+        <div class="cta-section">
+            <a href="index.html" class="cta-button">Launch Application →</a>
+        </div>
+    </div>
+</body>
+</html>

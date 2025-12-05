@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptBlocks Personal - AI Text Transformations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PromptBlocks Personal</h1>
+            <p class="intro">Simple AI text transformations powered by OpenRouter</p>
+        </header>
+
+        <main>
+            <section class="block-selector">
+                <label for="blockSelect">Select a Block:</label>
+                <select id="blockSelect">
+                    <option value="">-- Choose a transformation --</option>
+                </select>
+                <p id="blockDescription" class="block-description"></p>
+            </section>
+
+            <section class="input-section">
+                <label for="inputText">Input Text:</label>
+                <textarea id="inputText" rows="8" placeholder="Enter your text here..."></textarea>
+            </section>
+
+            <section class="actions">
+                <button id="sampleDataBtn" class="btn btn-secondary">Try Sample Data</button>
+                <button id="transformBtn" class="btn btn-primary">Transform</button>
+            </section>
+
+            <div id="errorMessage" class="error-message"></div>
+            
+            <div id="loadingIndicator" class="loading-indicator">
+                <div class="spinner"></div>
+                <p>Processing your text...</p>
+            </div>
+
+            <section class="output-section">
+                <div class="output-header">
+                    <label for="outputText">Result:</label>
+                    <button id="copyBtn" class="btn btn-copy" style="display: none;">📋 Copy to Clipboard</button>
+                </div>
+                <div id="outputText" class="output-display"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Configuration -->
+    <script src="../config.js"></script>
+    
+    <!-- Skeleton Engine Scripts -->
+    <script src="../skeleton/utils.js"></script>
+    <script src="../skeleton/block_registry.js"></script>
+    <script src="../skeleton/sample_data.js"></script>
+    <script src="../skeleton/block_executor.js"></script>
+    
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
